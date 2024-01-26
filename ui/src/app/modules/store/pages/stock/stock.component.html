@@ -43,13 +43,14 @@
             ></mat-progress-bar>
             <app-stock-batch-list
               *ngIf="params?.currentStock"
-              [stock]="params?.currentStock"
-              [ledgerTypes]="params?.ledgerTypes"
-              [currentStore]="params?.currentStore"
-              [isCurrentLocationMainStore]="params?.isCurrentLocationMainStore"
+
               [saving]="params?.savingLedger"
               (closeBatchList)="onToggleCurrentStock($event)"
               (saveLedger)="onSaveLedger($event, params?.currentStock)"
+                            [stock]="params?.currentStock"
+              [ledgerTypes]="params?.ledgerTypes"
+              [currentStore]="params?.currentStore"
+              [isCurrentLocationMainStore]="params?.isCurrentLocationMainStore"
             >
             </app-stock-batch-list
             ><!-- 
